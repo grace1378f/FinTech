@@ -1,81 +1,545 @@
 <html><!--other tags should be inside this-->
   <head><!--meta(non-content)data goes here-->
     <meta charset="utf-8">
-    <title>Fintech</title>
+    <title>Fintech_Home</title>
+    
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js'></script>
     <style>
-      #A{
-  width:1000px;
-  height:600px;
-  margin:-980px 170px;
+    #bar{
+  background:#3BB69F;
+  height:20px;
+  border-radius:10px;
+  position:fixed;
+  top:400px;
+  left:480px;
 }
-
-#back{
-  width:680px;
-  height:700px;
-  background-color:#3BB69F;
-  margin:0px;
-}
-#fintect{
-  position:absolute;
-  top:180px;
-  left:220px;
-}
-#logo{
-  position:absolute;
-  top:215px;  
-}
-#button{
-  
-  position:relative;
-  float:right;
-  top:780px;
-  
-}
-
-
-input{
-  width:180px;
-  height:38px;
-  border-radius:3px;
-  font-size:14pt;
-  outline: none;
-  font-family:century gothic;
-}
-#APP{
-  background-color:#3BB69F;
-  border:none ;
-  color:#FFFFFF;
+#bar_border{
+  background:transparent;
+  width:330px;
+  height:30px;
+  border-radius:20px;
+  border:2pt #727A79 solid;
   box-shadow:1px 1px 3px 1px #727A79,2px 2px 8px 3px #B7C4C2;
+  position:fixed;
+  top:393px;
+  left:470px;
 }
-#APP:hover{
-  background-color:#3AA69F;
+#loadtext{
+  width:200px;
+  color:#B7C4C2;
+  margin:320px auto;
+  font-family:century gothic;
+  font-size:20pt;
 }
-#LOG{
-  background-color:transparent;
-  border:2px #3BB69F solid ;
-  color:#3BB69F;
-  box-shadow:2px 2px 8px 1px #B7C4C2,inset 3px 3px 8px 1px #B7C4C2;
+#loading_bg{
+  width:100%;
+  height:700px;
+  background:#ffffff;
+  position:fixed;
+  top:0;
+  z-index:9999;
 }
-#LOG:hover{
-  background-color:rgba(0,0,0,0.05);
+.loading_logo{
+  width:300px;
+  margin:100px auto;
+}
+#loading_title{
+  position:relative;
+  top:-30px;
+  left:29px;
+}
+#top{
+  box-sizing:border-box;
+  height:70px;
+  width:100%;
+  background-color:#FFFFFF;
+  padding:20px 80px;
+}
+#icon{
+  float:right;
+}
+#about_icon{
+  width:40px;
+  height:40px;
+  margin:0px 20px;
+  transition:All 0.4s ease-in-out;
+}
+#service_icon{
+  width:40px;
+  height:40px;
+  margin:0px 20px;
+  transition:All 0.4s ease-in-out;
+}
+#news_icon{
+  width:40px;
+  height:40px;
+  margin:0px 20px;
+  transition:All 0.4s ease-in-out;
+}
+#con_icon{
+  width:40px;
+  height:40px;
+  margin:0px 20px;
+  transition:All 0.4s ease-in-out;
+}
+#icon>input:hover{
+   transform:scale(1.5);
 }
 body{
-  margin:0px;
+    background-color:#3BB69F;
+    margin:0px;
+}
+#bg{
+  width:100%;
+  height:700px;
+
+}
+#tit{
+  position:relative;
+  top:150px; 
+}
+#text{
+  position:relative;
+  top:-50px;
+}
+#hand{
+  position:relative;
+  top:-650px;
+  margin:0px -18px;
+}
+#about_bg{
+  margin:-10px -17px;
+  padding:0px;
+  border:0px;
+}
+h1{
+  width:440px;
+  font-size:90px;
+  color:#FFFFFF;
+  border-bottom:3px solid;
+  position:relative;
+  top:-400px;
+  font-family:century gothic;
+  font-weight:lighter;
+  letter-spacing:14px;
+}
+h2{
+  color:#FFFFFF;
+  position:relative;
+  top:-450px; 
+  font-family:Brush Script MT;
+  font-size:34px;
+  line-height:90px;
+  
+}
+#about_p{
+  width:1130px;
+  position:relative;
+  top:-280px;
+  font-size:22px;
+  font-family:century gothic;
+  color:#ffffff;
+  letter-spacing:1px;
+}
+#service{
+  height:800px;
+  padding:0px 170px;
+}
+h3{
+  position:relative;
+  top:-200px;
+  color:#ffffff;
+  font-family:century gothic;
+  font-weight:lighter;
+  font-size:40px;
+  letter-spacing:5px;
+}
+img.ser{
+  display:block;
+  margin:-50px auto;
+}
+ul{
+  position:relative;
+  top:-210px;
+}
+li{
+  margin:0;
+  padding:0;
+  float:left;
+  overflow:hidden;
+  width:300px;
+  color:#ffffff;
+  font-family:century gothic;
+  
+}
+li>img{
+  transition:All 1s ease-in-out;
+}
+li>img:hover{
+  transform:rotate(360deg);
+}
+#about_bottom{
+  width:100%;
+  height:60px;
+  background-color:#ffffff;
+  position:relative;
+  bottom:430px;
+  
+}
+#news_title{
+  box-sizing:border-box;  
+  height:160px;
+  width:100%;
+  padding:10px 80px 60px 150px;
+  background-color:#ffffff;
+  color:#000000;
+  font-family:century gothic;
+  font-size:40px;
+  font-weight:normal;
+  position:relative;
+  top:-410px;
+  line-height:215px;
+}
+p{
+  float:left;
+  color:#3BB69F;
+  font-size:90px;
+  line-height:0px;
+  font-weight:bold;
+}
+#news_title>img{
+  float:right;
+  position:relative;
+  top:80px;
+}
+#news_bg{
+  position:relative;
+  top:-440px;
+  margin:0px -17px;
+}
+#what{
+  width:900px;
+  height:170px;
+  background:-webkit-linear-gradient(left,#ffffff,transparent);
+  opacity:0.8;
+  position:relative;
+  top:-730px;
+
+}
+#line1{
+      font-family:century gothic;
+      font-size:36pt;
+      position:relative;
+      top:20px;
+      left:200px;  
+  }
+#line2{
+      font-family:century gothic;
+      font-size:54pt;  
+      position:relative;
+      top:20px;
+      left:370px;  
+}
+.news{
+  position:relative;
+  top:-660px;
+}
+#FN{
+  position:relative;
+  left:20px;
+  transition:All 0.4s ease-in-out;
+}
+
+#TN{
+  position:relative;
+  top:10px;
+  left:-20px;
+  transition:All 0.4s ease-in-out;
+}
+#EN{
+  transition:All 0.4s ease-in-out;
+}
+#FN:hover{
+  opacity:0.8;
+  transform:scale(1.1);
+}
+#TN:hover{
+  opacity:0.8;
+  transform:scale(1.1);
+}
+#EN:hover{
+  opacity:0.8;
+  transform:scale(1.1);
+}
+#line{
+  position:relative;
+  top:-175px;
+  left:320px;
+  height:60px;
+  width:230px;
+  border-left:1pt #ffffff solid;
+  border-right:1pt #ffffff solid;
+}
+#contact_top{
+  position:relative;
+  top:-800px;
+  width:1050px;
+  height:200px;
+  margin:auto;
+}
+h4{
+  color:#ffffff;
+  font-family:century gothic;
+  font-size:70pt;
+  font-weight:normal;
+}
+#contact_text{
+  position:relative;
+  top:-110px;
+  color:#ffffff;
+  font-family:century gothic;
+  font-size:24pt;  
+  width:1000px;
+
+}
+#contact_left{
+  font-family:century gothic;
+  font-size:24pt;
+  font-weight:bold;
+  height:200px;
+  width:1050px;
+  margin:-730px auto;
+}
+#twitter{
+  position:relative;
+  left:-120px;
+  top:-80px;
+}
+#facebook{
+  position:relative;
+  left:-350px;
+  top:-80px;
+}
+#contact_input{
+  float:right;
+  position:relative;
+  top:530px;
+  right:80px;
+}
+input{
+  width:440px;
+  height:40px;
+  background:#ffffff;
+  background-color: rgba(255,255,255,0.5);
+  border:none;
+  border-radius:15px;
+  margin:4px 0px;
+  outline: none;
+  padding-left:20px;
+}
+::-webkit-input-placeholder{
+  color:#ffffff;
+  font-family:century gothic;
+}
+textarea:-webkit-input-placeholder{
+  color:#ffffff;
+  font-family:century gothic;
+}
+#Message{
+  height:100px;
+  width:440px;
+  background:#ffffff;
+  background-color: rgba(255,255,255,0.5);
+  border:none;
+  border-radius:15px;
+  margin:4px 0px;
+  outline: none;
+  padding:10px 0 0 20px;
+}
+#S{
+  position:relative;
+  top:-100px;
+  right:100px;
+}
+#S:hover{
+opacity:0.8;
+}
+#R{
+  position:relative;
+  top:-101.8px;
+  right:300px;
+
+}
+#R:hover{
+  opacity:0.8;
 }
     </style>
   </head>
   <body>
-    <div id=back>  
-    </div>
-    <div id="A">
-    
-      <img id=fintect src="https://imageshack.com/i/poQBWr2Zp">
-      <img id=logo src="https://imageshack.com/i/poTBVhM5p">
-
-      <div id=button>
-        <input id="APP" name="APP" type="button" value="Get APP" >
-        <input id="LOG" name="LOG" type="button" value="Log In" onclick="self.location.href='http://s.codepen.io/grace1378f/debug/evRYXg/XxkVwDYnEeeM'">
+    <div class="loading">
+      <div id="loading_bg">
+      <div class="loading_logo">
+        <img  src="https://imageshack.com/i/pn9ttXU3g">
+        <img  id="loading_title" src="https://imageshack.com/i/pmLU6elCj"> 
       </div>
+      <div id="bar"></div>
+      <div id="bar_border"></div>  
+      <div id="loadtext">Loading...</div>  
+     </div>
     </div>
+    <!--home page-->
+    <div id=top>
+    <img id=logo src="https://imageshack.com/i/pn1CpBq6p">
+      <div id="icon">
+      <input type="image" id="about_icon" img src="https://imageshack.com/i/pnXfDYfNj">
+      <input type="image" id="service_icon" img src="https://imageshack.com/i/pnmsreSUj">
+      <input type="image" id="news_icon" img src="https://imageshack.com/i/pmOncg5Aj">
+      <input type="image" id="con_icon" img src="https://imageshack.com/i/poXS5Jzdj">
+      </div>
+      <script>
+        $(function() {
+         $('#about_icon').click(function(){ 
+          $('html,body').animate({scrollTop:$('#about_bg').offset().top}, 800); 
+         });
+         $('#service_icon').click(function(){ 
+          $('html,body').animate({scrollTop:$('#service').offset().top}, 800); 
+         });
+         $('#news_icon').click(function(){ 
+          $('html,body').animate({scrollTop:$('#news_title').offset().top}, 800); 
+         });
+         $('#con_icon').click(function(){ 
+          $('html,body').animate({scrollTop:$('#contact_top').offset().top}, 800); 
+         });
+        });  
+      </script>
+    </div>
+     <script type="text/javascript">
+       $('.loading').animate({'width':'10%'},50);
+       $('#bar').animate({'width':'30px'},50);
+     </script>
+    <div id="bg">
+      <div>
+      <img id="tit" src="https://imageshack.com/i/pnEDc8tGp">
+      </div>
+      <div>
+      <img id="text" src="https://imageshack.com/i/polweuhep">
+      </div>
+      <img id="hand" src="https://imageshack.com/i/poZJD33lp">
+    </div>
+    <script type="text/javascript"> 
+      $('.loading').animate({'width':'20%'},50);
+    $('#bar').animate({'width':'60px'},50);</script>
+    <!--about page-->
+    <img id="about_bg" src="https://imageshack.com/i/pnmFYBmbj">
+      <center>
+        <h1>FINTECH</h1>
+        <h2>We take the weights of your shoulders! </h2>
+        <div id="about_p">
+         FinTech, is an industry composed of companies that use new technology and innovation with available resources in order to compete in the marketplace of traditional financial institutions and intermediarues in the delivery of financial services. Financial technology companies consist of both startups and established financial and technology companies trying to replace or enhance the usage of financial services of incumbent companies.
+        </div>
+         <script type="text/javascript">
+           $('.loading').animate({'width':'30%'},50);
+           $('#bar').animate({'width':'90px'},50);
+        </script>
+    </center>
+    <!--service page-->
+    <div id="service">
+      <center><h3>SERVICES WE PROVIDE</h3>
+      <ul> 
+      <li><img  class="ser" src="https://imageshack.com/i/pmUuGntRp">
+        ANALYSIS</li>
+      <li><img class="ser" src="https://imageshack.com/i/pn07ms81p">
+        PROGRAM</li>  
+      <li><img class="ser" src="https://imageshack.com/i/potxTerip">  
+        SEARCH</li>  
+        </ul>
+        <ul> 
+      <li><img  class="ser" src="https://imageshack.com/i/pmKBGg1Zp">
+        RECOMMEND</li>
+      <li><img class="ser" src="https://imageshack.com/i/poEoztWcp">
+        RECORD</li>  
+      <li><img class="ser" src="https://imageshack.com/i/pnc0EmPzp">  
+        CALCULATE</li>  
+        </ul>
+      </center>
+      
+    </div>
+    <script type="text/javascript"> 
+      $('.loading').animate({'width':'40%'},50);
+      $('#bar').animate({'width':'120px'},50);
+    </script>
+    <div id=about_bottom>
+    </div>
+     <script type="text/javascript"> 
+       $('.loading').animate({'width':'50%'},50);
+       $('#bar').animate({'width':'150px'},50);
+    </script>
+    <!--news page-->
+    <div id=news_title>
+      <p>NEWS</p>PORTAL
+      <img src="https://imageshack.com/i/pn1CpBq6p">
+    </div>
+     <script type="text/javascript"> 
+       $('.loading').animate({'width':'60%'},50);
+       $('#bar').animate({'width':'180px'},50);
+    </script>
+    <img id=news_bg src="https://imageshack.com/i/pohbRkH7j">
+    <div id=what>
+      <div id=line1>
+      What's Next for
+      </div>
+      <div id=line2>
+        FINTECH
+      </div>  
+    </div>
+    <script type="text/javascript"> 
+      $('.loading').animate({'width':'70%'},50);
+      $('#bar').animate({'width':'210px'},50);
+    </script>
+    <div class=news>
+    <img id=FN src="https://imageshack.com/i/pmsxT3odp">
+    <img id=TN src="https://imageshack.com/i/pn1opiw4p">
+    <img id=EN src="https://imageshack.com/i/poLLDxOFp">
+       <div id=line >
+       </div>
+    </div>
+    <script type="text/javascript"> 
+      $('.loading').animate({'width':'80%'},50);
+      $('#bar').animate({'width':'240px'},50);
+    </script>
+    <!--contact page-->
+    <div id=contact_top>
+    <h4>contact</h4>
+      <div id=contact_text>Please feel free to contact us via any of the details in the form below and we will get back you as soon as possible. </div>  
+    </div>
+     <script type="text/javascript"> 
+       $('.loading').animate({'width':'90%'},50);
+       $('#bar').animate({'width':'270px'},50);
+    </script>
+    <div id=contact_left>
+      06-275-7575
+      <br>
+      <img id=twitter src="https://imageshack.com/i/polnmIeVp">
+      <img id=facebook src="https://imageshack.com/i/pngP5rJTp">
+    </div>
+    <div id=contact_input>
+      <input type="text" name="Name" placeholder="Name"> 
+      <br>
+      <input type="text" name="Email" placeholder="Email">
+      <br>
+      <input type="text" name="Subject" placeholder="Subject">
+      <br>
+      <textarea id=Message placeholder="Message"></textarea>
+      <br>
+      <img id=S src="https://imageshack.com/i/pmzLO6rMp">
+      <img id=R src="https://imageshack.com/i/pnvNw1lUp">
+    </div>
+     <script type="text/javascript"> 
+       $('.loading').animate({'width':'100%'},50);
+       $('#bar').animate({'width':'300px'},50);
+       $(document).ready(function(){ 
+                  $('.loading').fadeOut(50);
+       });
+</script>
   </body>
 </html>
