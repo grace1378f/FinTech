@@ -54,36 +54,43 @@
   width:100%;
   background-color:#FFFFFF;
   padding:20px 80px;
+  z-index:5;
 }
 #icon{
+  position:relative;
   float:right;
+  z-index:6;
 }
 #about_icon{
   width:40px;
   height:40px;
   margin:0px 20px;
   transition:All 0.4s ease-in-out;
+
 }
 #service_icon{
   width:40px;
   height:40px;
   margin:0px 20px;
   transition:All 0.4s ease-in-out;
+
 }
 #news_icon{
   width:40px;
   height:40px;
   margin:0px 20px;
   transition:All 0.4s ease-in-out;
+
 }
 #con_icon{
   width:40px;
   height:40px;
   margin:0px 20px;
   transition:All 0.4s ease-in-out;
+  z-index:6;
 }
-#icon>input:hover{
-   transform:scale(1.5);
+#icon>img:hover{
+   transform:scale(1.3);
 }
 body{
     background-color:#3BB69F;
@@ -92,20 +99,24 @@ body{
 #bg{
   width:100%;
   height:700px;
-
+  z-index:4;
 }
 #tit{
   position:relative;
-  top:150px; 
+  top:150px;
+  z-index:3;
 }
 #text{
   position:relative;
   top:-50px;
+  z-index:2;
+
 }
 #hand{
   position:relative;
   top:-650px;
   margin:0px -18px;
+  z-index:1;
 }
 #about_bg{
   margin:-10px -17px;
@@ -154,7 +165,7 @@ h3{
   font-size:40px;
   letter-spacing:5px;
 }
-img.ser{
+.ser{
   display:block;
   margin:-50px auto;
 }
@@ -326,7 +337,7 @@ h4{
   top:530px;
   right:80px;
 }
-input{
+.Cinput{
   width:440px;
   height:40px;
   background:#ffffff;
@@ -373,10 +384,10 @@ opacity:0.8;
 #R:hover{
   opacity:0.8;
 }
-    </style>
+    </style> 
   </head>
   <body>
-    <div class="loading">
+  <!-- <div class="loading">
       <div id="loading_bg">
       <div class="loading_logo">
         <img  src="https://imageshack.com/i/pn9ttXU3g">
@@ -386,15 +397,15 @@ opacity:0.8;
       <div id="bar_border"></div>  
       <div id="loadtext">Loading...</div>  
      </div>
-    </div>
+    </div>-->
     <!--home page-->
     <div id=top>
-    <img id=logo src="https://imageshack.com/i/pn1CpBq6p">
+      <img id=logo src="https://imageshack.com/i/pn1CpBq6p">
       <div id="icon">
-      <input type="image" id="about_icon" img src="https://imageshack.com/i/pnXfDYfNj">
-      <input type="image" id="service_icon" img src="https://imageshack.com/i/pnmsreSUj">
-      <input type="image" id="news_icon" img src="https://imageshack.com/i/pmOncg5Aj">
-      <input type="image" id="con_icon" img src="https://imageshack.com/i/poXS5Jzdj">
+       <img id="about_icon" src="https://imageshack.com/i/pnXfDYfNj">
+       <img id="service_icon" src="https://imageshack.com/i/pnmsreSUj">
+       <img id="news_icon" src="https://imageshack.com/i/pmOncg5Aj">
+       <img id="con_icon" src="https://imageshack.com/i/poXS5Jzdj">
       </div>
       <script>
         $(function() {
@@ -402,7 +413,7 @@ opacity:0.8;
           $('html,body').animate({scrollTop:$('#about_bg').offset().top}, 800); 
          });
          $('#service_icon').click(function(){ 
-          $('html,body').animate({scrollTop:$('#service').offset().top}, 800); 
+          $('html,body').animate({scrollTop:$('h3').offset().top}, 800); 
          });
          $('#news_icon').click(function(){ 
           $('html,body').animate({scrollTop:$('#news_title').offset().top}, 800); 
@@ -410,7 +421,7 @@ opacity:0.8;
          $('#con_icon').click(function(){ 
           $('html,body').animate({scrollTop:$('#contact_top').offset().top}, 800); 
          });
-        });  
+        });
       </script>
     </div>
      <script type="text/javascript">
@@ -523,11 +534,11 @@ opacity:0.8;
       <img id=facebook src="https://imageshack.com/i/pngP5rJTp">
     </div>
     <div id=contact_input>
-      <input type="text" name="Name" placeholder="Name"> 
+      <input class=Cinput type="text" name="Name" placeholder="Name"> 
       <br>
-      <input type="text" name="Email" placeholder="Email">
+      <input class=Cinput type="text" name="Email" placeholder="Email">
       <br>
-      <input type="text" name="Subject" placeholder="Subject">
+      <input class=Cinput type="text" name="Subject" placeholder="Subject">
       <br>
       <textarea id=Message placeholder="Message"></textarea>
       <br>
