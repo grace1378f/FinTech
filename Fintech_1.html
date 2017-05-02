@@ -1,81 +1,31 @@
-<html><!--other tags should be inside this-->
-  <head><!--meta(non-content)data goes here-->
+<!DOCTYPE html>
+<html>
+  <head>
     <meta charset="utf-8">
-    <title>Fintech</title>
-    <style>
-      #A{
-  width:1000px;
-  height:600px;
-  margin:-980px 170px;
-}
-
-#back{
-  width:680px;
-  height:700px;
-  background-color:#3BB69F;
-  margin:0px;
-}
-#fintect{
-  position:absolute;
-  top:180px;
-  left:220px;
-}
-#logo{
-  position:absolute;
-  top:215px;  
-}
-#button{
-  
-  position:relative;
-  float:right;
-  top:780px;
-  
-}
-
-
-input{
-  width:180px;
-  height:38px;
-  border-radius:3px;
-  font-size:14pt;
-  outline: none;
-  font-family:century gothic;
-}
-#APP{
-  background-color:#3BB69F;
-  border:none ;
-  color:#FFFFFF;
-  box-shadow:1px 1px 3px 1px #727A79,2px 2px 8px 3px #B7C4C2;
-}
-#APP:hover{
-  background-color:#3AA69F;
-}
-#LOG{
-  background-color:transparent;
-  border:2px #3BB69F solid ;
-  color:#3BB69F;
-  box-shadow:2px 2px 8px 1px #B7C4C2,inset 3px 3px 8px 1px #B7C4C2;
-}
-#LOG:hover{
-  background-color:rgba(0,0,0,0.05);
-}
-body{
-  margin:0px;
-}
-    </style>
-  </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head> 
   <body>
-    <div id=back>  
+    <div id="log">
+      <span style="font-size:60px; color:white; position:relative; top:150px; left:490px;">台灣各地區</span>
+      <span style="font-size:60px; color:white; position:relative; top:150px; left:560px;">必買</span>
+      <span style="font-size:100px; color:white; position:relative; top:250px; left:60px;">伴手禮推薦</span>
     </div>
-    <div id="A">
-    
-      <img id=fintect src="https://imageshack.com/i/poQBWr2Zp">
-      <img id=logo src="https://imageshack.com/i/poTBVhM5p">
-
-      <div id=button>
-        <input id="APP" name="APP" type="button" value="Get APP" >
-        <input id="LOG" name="LOG" type="button" value="Log In" onclick="self.location.href='https://grace1378f.github.io/FinTech/Fintech_2.html'">
+    <form>
+      <input type="text" id="username" placeholder="帳號">
+      <input type="password" id="password" placeholder="密碼">
+      <input type="button" id="login" value="登入" onclick="location.href=''">
+    </form>
+      <div>
+        <a style="font-size:20px; font-family:Microsoft JhengHei; color:black; position:relative; top:330px; left:950px;">忘記密碼?</a>
+        <span style="font-size:20px; font-family:Microsoft JhengHei; color:black; position:relative; top:830px; left:370px;">尚未註冊?</span>
+        <a style="font-size:20px; font-family:Microsoft JhengHei; color:#ffbb00; position:relative; top:830px; left:370px;">立即註冊</a>
       </div>
-    </div>
+    <table style="position:relative; top:1200px; left:100px;">
+      <td width=300px><img src="pic07.png" height=120px></td>
+      <td width=300px><img src="pic08.png" height=120px></td>
+      <td width=300px><img src="pic09.png" height=120px></td>
+      <td width=300px><img src="pic10.png" height=120px></td>
+      <td width=0px><img src="pic11.png" height=120px></td>
+    </table>
   </body>
 </html>
