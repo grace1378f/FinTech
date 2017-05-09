@@ -2,89 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <style>
-      body{
-  margin:0px;
-}
-
-#log{
-  background-image:url(http://imgur.com/CYXyKpu.png);
-  background-position:0px -30px;
-  background-repeat:no-repeat;
-  background-size:100%;
-  width:1519px;
-  height:700px;
-  margin:0px auto;
-}
-#username{
-  position:relative;
-  top:250px;
-  left:400px;
-  width:600px;
-  height:85px;
-  padding-left:70px;
-  background-color:rgba(0%,0%,0%,0);
-  border:2px solid #ffbb00;
-  border-radius:40px;
-  background-image:url(http://imgur.com/dzrqYg2.png);
-  background-repeat:no-repeat;
-  background-position:25px 25px;
-  font-size:25px;
-  font-family:Microsoft JhengHei;
-  margin:0px auto;
-  outline:none;
-}
-#username::-webkit-input-placeholder{
-  color:#ffbb00;
-}
-#password{
-  position:relative;
-  top:350px;
-  left:400px;
-  width:600px;
-  height:85px;
-  padding-left:70px;
-  background-color:rgba(0%,0%,0%,0);
-  border:2px solid #ffbb00;
-  border-radius:40px;
-  background-image:url(http://imgur.com/5WYzAPI.png);
-  background-repeat:no-repeat;
-  background-position:25px 25px;
-  font-size:25px;
-  font-family:Microsoft JhengHei;
-  margin:0px auto;
-  outline:none;
-}
-#password::-webkit-input-placeholder{
-  color:#ffbb00;
-}
-#login{
-  position:relative;
-  top:800px;
-  left:400px;
-  width:600px;
-  height:85px;
-  border:none;
-  border-radius:40px;
-  cursor:pointer;
-  background-color:#ffbb00;
-  color:#ffffff;
-  font-size:35px;
-  font-family:Microsoft JhengHei;
-  transition:all 0.2s;
-  margin:0px auto;
-  outline:none;
-}
-#login:hover{
-  transform:scale(1.05,1.05);
-  box-shadow:0px 0px 50px rgba(20%,20%,40%,0.5);
-}
-      table{
-        position:relative; 
-        top:1200px;
-        margin:0px 150px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head> 
   <body>
     <div id="log">
@@ -92,22 +10,38 @@
       <span style="font-size:60px; color:white; position:relative; top:150px; left:560px;">必買</span>
       <span style="font-size:100px; color:white; position:relative; top:250px; left:60px;">伴手禮推薦</span>
     </div>
-    <form>
-      <input type="text" id="username" placeholder="帳號">
-      <input type="password" id="password" placeholder="密碼">
-      <input type="button" id="login" value="登入" onclick="location.href=''">
-    </form>
-      <div>
-        <a style="font-size:20px; font-family:Microsoft JhengHei; color:black; position:relative; top:330px; left:950px;">忘記密碼?</a>
-        <span style="font-size:20px; font-family:Microsoft JhengHei; color:black; position:relative; top:830px; left:370px;">尚未註冊?</span>
-        <a style="font-size:20px; font-family:Microsoft JhengHei; color:#ffbb00; position:relative; top:830px; left:370px;">立即註冊</a>
+
+    <div id="input">
+      <form>
+        <input type="text" id="username" placeholder="帳號">
+        <input type="password" id="password" placeholder="密碼">
+        <input type="button" id="login" value="登入" onclick="location.href='https://luffy.ee.ncku.edu.tw/~tomlee010364/speciallist/home'">
+      </form>
+      <a style="font-size:20px; font-family:Microsoft JhengHei; color:black; position:relative; top:340px; left:465px;">記住密碼</a>
+      <a style="font-size:20px; font-family:Microsoft JhengHei; color:black; position:relative; top:340px; left:542px;">自動登入</a>
+      <a href="" style="font-size:20px; font-family:Microsoft JhengHei; color:black; position:relative; top:340px; left:790px;">忘記密碼?</a>
+      <span style="font-size:20px; font-family:Microsoft JhengHei; color:black; position:relative; top:720px; left:190px;">尚未註冊?</span>
+      <a href="" style="font-size:20px; font-family:Microsoft JhengHei; color:#f0c164; position:relative; top:720px; left:190px;">立即註冊</a>
+      <div class="checkboxFive">
+        <input type="checkbox" value="1" id="checkboxFiveInput" name="" />
+        <label for="checkboxFiveInput"></label>
       </div>
-    <table >
-      <td width=300px><img src="http://imgur.com/wHZcwYx.png" height=120px></td>
-      <td width=300px><img src="http://imgur.com/kDnhg90.png" height=120px></td>
-      <td width=300px><img src="http://imgur.com/HCbeFVj.png" height=120px></td>
-      <td width=300px><img src="http://imgur.com/98TPBhN.png" height=120px></td>
-      <td width=0px><img src="http://imgur.com/0eWmx5M.png" height=120px></td>
-    </table>
+      <div class="checkbox">
+        <input type="checkbox" value="1" id="checkboxInput" name="" />
+        <label for="checkboxInput"></label>
+      </div>
+    </div>
+
+    <div id="logo">
+      <table style="position:relative; top:500px; left:0px;">
+        <td width=100px></td>
+        <td width=300px><img src="pic07.png" height=120px></td>
+        <td width=300px><img src="pic08.png" height=120px></td>
+        <td width=300px><img src="pic09.png" height=120px></td>
+        <td width=300px><img src="pic10.png" height=120px></td>
+        <td width=0px><img src="pic11.png" height=120px></td>
+      </table>
+    </div>
+
   </body>
 </html>
