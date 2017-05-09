@@ -76,7 +76,7 @@ body{
   left:740px;
 }
 #log{
-  background-image:url(pic01.png);
+  background-image:url(login/pic01.png);
   background-position:0px -30px;
   background-repeat:no-repeat;
   background-size:100%;
@@ -99,7 +99,7 @@ body{
   background-color:rgba(0%,0%,0%,0);
   border:2px solid #e5ae19;
   border-radius:40px;
-  background-image:url(pic03.png);
+  background-image:url(login/pic03.png);
   background-repeat:no-repeat;
   background-position:25px 25px;
   font-size:25px;
@@ -119,7 +119,7 @@ body{
   background-color:rgba(0%,0%,0%,0);
   border:2px solid #e5ae19;
   border-radius:40px;
-  background-image:url(pic04.png);
+  background-image:url(login/pic04.png);
   background-repeat:no-repeat;
   background-position:25px 25px;
   font-size:25px;
